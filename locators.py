@@ -44,3 +44,4 @@ class ComponentSelection:
     #Кнопка для перехода на выбор Соусов
     CHOICE_OF_FILLING = (By.XPATH, "//span[contains(text(), 'Начинки')]")
 
+#
