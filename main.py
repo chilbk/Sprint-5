@@ -8,7 +8,7 @@ class Auth:
     def generate_password(self):
         return 'vda_' + str(rnd.randint(100000, 999999))
 
-user_auth = Auth()
+#user_auth = Auth()
 #random_login = user_auth.generate_login()
 #random_password = user_auth.generate_password()
 #print(random_login)

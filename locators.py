@@ -23,6 +23,8 @@ class AuthForm:
     AUTH_REG_BUTTON = (By.XPATH, "//a[@href='/register']")
     #Кнопка восстановления пароля на форме Аутентификации
     AUTH_PASS_RECOVERY = (By.XPATH, "//a[@href='/forgot-password']")
+    #Ошбика Некорректный пароль
+    AUTH_PASS_ERROR = (By.XPATH, "//p[contains(., 'Некорректный')]")
 
     #Локаторы верхней части страницы
 class TopOfPage:
@@ -33,7 +35,7 @@ class TopOfPage:
     #Кнопка для перехода на экран Заказов
     ORDER_FEED_ELM = (By.XPATH, "//a[contains(., 'Лента Заказов')]")
     #Кнопка для перехода в Личный кабинет
-    ACCOUNT_ELM = (By.XPATH, "//a[contains(., 'Личный')]")
+    ACCOUNT_ELM = (By.XPATH, ".//*[@href='/account']")
 
     #Локаторы настройки бургера
 class ComponentSelection:
@@ -44,4 +46,15 @@ class ComponentSelection:
     #Кнопка для перехода на выбор Соусов
     CHOICE_OF_FILLING = (By.XPATH, "//span[contains(text(), 'Начинки')]")
 
-#
+class ToAuth:
+    #Переход на форму Авторизации из главного окна
+    MAIN_SCREEN_AUTH = (By.XPATH, "//button[text()='Войти в аккаунт']")
+    #Переход на форму Авторизации по нажатию на 'Личный кабинет'
+    LOGIN_SCREEN_AUTH = (By.XPATH, ".//*[@href='/account']")
+    #Переход на форму Авторизации на экране регистрации
+    REG_SCREEN_AUTH = (By.XPATH, "//a[@href='/login']")
+    #Переход на форму Авторизации на экране восстановления пароля
+    RECOVERY_SCREEN_AUTH = (By.XPATH, "//a[@href='/login']")
+
+class Logout:
+    LOGOUT_FROM_ACCOUNT = (By.XPATH, "//button[contains(., 'Выход')]")
