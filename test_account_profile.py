@@ -34,6 +34,7 @@ class TestLogout:
 
         WebDriverWait(browser, 10).until(EC.url_to_be(ACCOUNT_URL))
 
+#Здесь тоже не знаю почему не прожимается профиль. Перепробовал вообще всё, что можно, но не могу нажать на этот дурацкий профиль. Хз. Я в отчаянии
     # Переход на вкладку 'account/profile'
     def burgers_account(self, browser):
         self.login(browser)
